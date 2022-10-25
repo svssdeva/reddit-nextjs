@@ -4,10 +4,10 @@ const posts = [
         id: 0, author: `Deveshwar Jaiswal`, title: 'Hello Reddit App via Next JS 1'
     },
     {
-        id: 0, author: `Deveshwar Jaiswal`, title: 'Hello Reddit App via Next JS 2'
+        id: 1, author: `Deveshwar Jaiswal`, title: 'Hello Reddit App via Next JS 2'
     },
     {
-        id: 0, author: `Deveshwar Jaiswal`, title: 'Hello Reddit App via Next JS 3'
+        id: 2, author: `Deveshwar Jaiswal`, title: 'Hello Reddit App via Next JS 3'
     }
 ];
 
@@ -17,8 +17,8 @@ const style = {
 const Feed = () => {
     return (
        <div className={style.wrapper}>
-           {posts.map((post) => (
-               <Post {...post}/>
+           {posts.map((post, id) => (
+               <Post {...post} key={id}/>
            ))}
        </div>
     )
