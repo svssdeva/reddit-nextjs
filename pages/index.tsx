@@ -19,8 +19,7 @@ const Home: NextPage = () => {
     // @ts-ignore
     const fetcher = (...args) => fetch(...args).then(res => res.json());
     const {data, error} = useSwr('/api/get-posts', fetcher);
-    console.log(data);
-    console.error(error);
+    console.log(data, 'hello');
   return (
     <div className={style.wrapper}>
       <Header />
